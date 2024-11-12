@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    margin: 0;
+    
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.header__menu {
+    display: grid;
+    grid-auto-flow: column;
+}
