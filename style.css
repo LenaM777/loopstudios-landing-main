@@ -7,16 +7,92 @@ body {
     
 }
 
-
+img, 
+picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 .container {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 50px;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 148px;
+    }
 }
 
 .header__menu {
     display: grid;
     grid-auto-flow: column;
 }
+
+.products-section__container {
+   
+    display: grid;
+   grid-template: min-content min-content min-content / 1fr;
+   justify-items: center;
+   gap: 40px;
+   margin: 0 auto;
+
+   @media screen and (min-width: 768px) {
+    
+    grid-template: min-content min-content min-content / 1fr 1fr 1fr 1fr;
+   }
+ 
+}
+
+
+.products-section__list {
+    grid-column: 1 / 5;
+    display: grid;
+    
+    gap: 40px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+.products-section__button {
+    
+    justify-self: center;
+
+    @media screen and (min-width: 768px) {
+        grid-row: 1 / 2;
+        grid-column: 3 / 5;
+        justify-self: end;
+    }
+
+}
+
+
+
+
+
+
+.card {
+    position: relative;
+}
+
+.card__image {
+    position: relative;    
+}
+
+.card__text {
+        color: aliceblue;
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        max-width: 9ch;
+        text-align: start;
+        text-transform: uppercase;
+        margin: 0;
+}
+
