@@ -3,6 +3,8 @@
 }
 
 body { 
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
     margin: 0;
     
 }
@@ -15,7 +17,20 @@ picture {
     object-fit: cover;
 }
 
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+}
+
 .container {
+    
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -37,9 +52,37 @@ picture {
     padding-top: 64px;
 }
 
-.header__menu {
+.header__container {
+    display: grid;
+   
+    
+}
+
+
+.header__nav {
     display: grid;
     grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__menu {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 50px;
+    }
+}
+
+
+.header__burger {
+      display: block;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 
@@ -145,7 +188,7 @@ picture {
 
 
 
-
+/* card */
 
 
 .card {
@@ -159,11 +202,76 @@ picture {
 .card__text {
         color: aliceblue;
         position: absolute;
-        bottom: 40px;
-        left: 40px;
-        max-width: 9ch;
+        bottom: 1em;
+        left: 1em;
+        max-width: 6em;
+        font-family: 'Josefin Sans';
+        font-size: 1.5rem;
         text-align: start;
         text-transform: uppercase;
         margin: 0;
 }
 
+/* footer */
+
+.footer {
+   
+    background-color: black;
+    padding: 50px 0;
+    color: aliceblue;
+}
+
+.footer__container {
+    display: grid;
+    grid-auto-flow: row;
+    
+    gap: 40px;
+
+    @media screen and (min-width: 768px) {
+        grid-auto-flow: column;
+
+    }
+}
+
+.footer__nav {
+    display: grid;
+    justify-self: center;
+    gap: 40px;
+
+    @media screen and (min-width: 768px) {
+        justify-self: start;
+    }
+}
+
+.footer__menu {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 40px;
+
+    @media screen and (min-width: 768px) {
+        
+        grid-auto-flow: column;
+        gap: 50px;
+    }
+}
+
+.footer__address {
+       display: grid;
+       justify-self: center;
+       gap: 40px;
+
+    @media screen and (min-width: 768px) {
+        justify-self: end;
+    }
+}
+
+.footer__socials {
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: center;
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        justify-self: end;
+    }
+}
