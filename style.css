@@ -51,7 +51,7 @@ p {
     width: 0;
     height: 2px;
     background-color: var(--color-white);
-    transition: width 0.3s ease;
+    transition: width ease;
 }
 
 .link:hover::after {
@@ -309,6 +309,7 @@ p {
 .products-section__button:hover {
     color: var(--color-white);
     background-color: var(--color-black);
+    
 }
 
 
@@ -317,11 +318,23 @@ p {
 
 .card {
     position: relative;
+   
 }
 
+
+
+  
+
 .card__image {
-    position: relative;    
+    position: relative;  
+    
 }
+
+
+
+
+
+
 
 .card__text {
         color: var(--color-white);
@@ -343,6 +356,16 @@ p {
             font-size: 32px;
         }
 }
+
+.card:hover .card__image {
+    opacity: 0.3;
+    transition: 2s;
+  }
+  
+  .card:hover .card__text {
+    color: var(--color-black);
+    transition: 2s;
+  }
 
 /* footer */
 
